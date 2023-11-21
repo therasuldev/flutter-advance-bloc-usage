@@ -38,6 +38,7 @@ dependencies:
   carousel_slider: ^4.2.1
   flutter_widget_from_html: ^0.14.7
   url_launcher: ^6.2.1
+  webview_flutter: ^4.4.2
 
 dev_dependencies:
   flutter_test:

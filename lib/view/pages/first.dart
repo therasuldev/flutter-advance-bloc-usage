@@ -26,20 +26,6 @@ class _FirstState extends State<First> {
           return _buildItem(animation, index);
         },
       ),
-
-      // ListView.builder(
-      //   key: PageStorageKey(widget.key),
-      //   itemCount: 50,
-      //   itemBuilder: (context, index) {
-      // return ListTile(
-      //   leading: Text(
-      //     index.toString(),
-      //     style: const TextStyle(fontSize: 20),
-      //   ),
-      //   title: const Text('Home page tutorial'),
-      // );
-      //   },
-      // ),
     );
   }
 

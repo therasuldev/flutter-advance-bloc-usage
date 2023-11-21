@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Third extends StatefulWidget {
   const Third({super.key});
@@ -10,12 +12,9 @@ class Third extends StatefulWidget {
 class _ThirdState extends State<Third> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        height: 150,
-        width: 150,
-        color: Colors.red,
-        child: const Text('Settings PAGE'),
+    return const Center(
+      child: Row(
+        children: [Text('a'), Spacer(), Text('b')],
       ),
     );
   }
