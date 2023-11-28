@@ -1,4 +1,4 @@
-import 'package:first_flutter_project/snackbar_without_context.dart';
+import 'package:first_flutter_project/lesson/snackbar_without_context.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 

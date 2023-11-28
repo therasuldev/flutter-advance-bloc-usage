@@ -39,6 +39,9 @@ dependencies:
   flutter_widget_from_html: ^0.14.7
   url_launcher: ^6.2.1
   webview_flutter: ^4.4.2
+  hexcolor: ^3.0.1
+  font_awesome_flutter: ^10.6.0
+  dio: ^5.3.4
 
 dev_dependencies:
   flutter_test:
