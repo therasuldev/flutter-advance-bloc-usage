@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'proflile.dart';
 
@@ -47,8 +48,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
             children: [
               Container(
                 height: 200,
-                width: 150,
+                width: 100,
                 color: Colors.blue,
+                child: Text(
+                  'GOOGLE Fonts Example',
+                  style: GoogleFonts.aboreto(fontSize: 30),
+                ),
               ),
               Container(
                 height: 200,
