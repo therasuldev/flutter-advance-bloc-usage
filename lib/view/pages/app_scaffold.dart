@@ -1,6 +1,7 @@
 import 'package:first_flutter_project/view/pages/home.dart';
 import 'package:flutter/material.dart';
 
+import 'api_example.dart';
 import 'proflile.dart';
 
 class AppScaffold extends StatefulWidget {
@@ -12,7 +13,7 @@ class AppScaffold extends StatefulWidget {
 
 class _AppScaffoldState extends State<AppScaffold> {
   int _bottomBarIndex = 0;
-  List<Widget> pages = const [Home(), Profile()];
+  List<Widget> pages = const [Home(), ApiExample(), Profile()];
 
   PageController pageController = PageController();
 
@@ -41,6 +42,7 @@ class _AppScaffoldState extends State<AppScaffold> {
         currentIndex: _bottomBarIndex,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.api), label: 'API'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
         onTap: (index) {
