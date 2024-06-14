@@ -19,7 +19,8 @@ class UserPage extends StatefulWidget {
 }
 
 class _UserPageState extends State<UserPage> {
-  StreamController<List<int>> streamController = StreamController<List<int>>.broadcast();
+  StreamController<List<int>> streamController =
+      StreamController<List<int>>.broadcast();
   List<int> list = [];
   int index = 0;
 

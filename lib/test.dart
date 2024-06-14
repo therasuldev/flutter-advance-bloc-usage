@@ -14,25 +14,44 @@ void main() {
 
   // print("username: ${message.user.toJson()}");
 
-  Game game = Game();
-  game.increaseScore();
-  game.increaseScore();
-  game.increaseScore();
+  // Game game = Game();
+  // game.increaseScore();
+  // game.increaseScore();
+  // game.increaseScore();
 
-  print("SCORE:  ${Game().score}");
+  // print("SCORE:  ${Game().score}");
 
-  print('---------------------------------');
+  // print('---------------------------------');
 
-  Game.increaseScoreStatic();
-  Game.increaseScoreStatic();
-  Game.increaseScoreStatic();
+  // Game.increaseScoreStatic();
+  // Game.increaseScoreStatic();
+  // Game.increaseScoreStatic();
 
-  print("SCORE 1:  ${Game.score1}");
+  // print("SCORE 1:  ${Game.score1}");
+
+  // Set result = {};
+  // const numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+  // int mNumber = 54943043;
+  // int n = 1;
+
+  // do {
+  //   var lastNumber = mNumber % 10;
+  //   result.add(lastNumber);
+
+  //   mNumber = mNumber ~/ 10;
+  //   n *= 10;
+  // } while (mNumber > 0);
+
+  // print(numbers.difference(result));
+
+  var list = [1, 2, 3, 4, 5];
+  final result = list.map((element) => element * 2).toList();
+  print(result);
 }
 
 class PrivateClass {
   PrivateClass._();
-  static PrivateClass? instance =  PrivateClass._();
+  static PrivateClass? instance = PrivateClass._();
   int a = 10;
 }
 

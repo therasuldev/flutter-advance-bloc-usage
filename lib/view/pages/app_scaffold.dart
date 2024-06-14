@@ -1,8 +1,9 @@
+import 'package:first_flutter_project/view/pages/github_profile.dart';
 import 'package:first_flutter_project/view/pages/home.dart';
 import 'package:flutter/material.dart';
 
 import 'api_example.dart';
-import 'proflile.dart';
+import 'profile.dart';
 
 class AppScaffold extends StatefulWidget {
   const AppScaffold({super.key});
@@ -13,7 +14,7 @@ class AppScaffold extends StatefulWidget {
 
 class _AppScaffoldState extends State<AppScaffold> {
   int _bottomBarIndex = 0;
-  List<Widget> pages = const [Home(), ApiExample(), Profile()];
+  List<Widget> pages = const [Home(), ApiExample(), GithubProfile()];
 
   PageController pageController = PageController();
 

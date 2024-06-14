@@ -1,17 +1,31 @@
-import 'package:dio/dio.dart';
+import 'dart:developer';
+import 'package:first_flutter_project/core/model/repository_model.dart';
 import 'package:first_flutter_project/core/model/user_model.dart';
+import 'package:http/http.dart' as http;
+import 'package:dio/dio.dart';
+
+// https://api.github.com/users/therasuldev
+// https://api.github.com/users/therasuldev/repos
 
 class ApiService {
-  late Dio? dio;
+  ApiService._();
+
   ApiService() {
-    dio = Dio(BaseOptions(baseUrl: 'https://api.github.com'));
+    _dio = Dio(BaseOptions(baseUrl: 'https://api.github.com'));
   }
 
-  Future<List<UserModel>> fetchUsers() async {
-    final response = await dio?.get('/users');
-    final data = response!.data as List<dynamic>;
-    final result = data.map((userJson) => UserModel.fromJson(userJson)).toList();
+  late Dio _dio;
 
-    return result;
+  Future<User> getUsersInformation(String username) async {
+    final response = await _dio.get('/users/$username');
+    final userJson = response.data;
+    return User.fromJson(userJson);
+  }
+
+  Future<List<Repository>> getUsersRepositories(String username) async {
+    final response = await _dio.get('/users/$username/repos');
+    final repositoryJsons = response.data as List;
+    final repositories = repositoryJsons.map((repoJson) => Repository.fromJson(repoJson)).toList();
+    return repositories;
   }
 }

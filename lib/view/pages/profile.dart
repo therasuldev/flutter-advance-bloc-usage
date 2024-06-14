@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:first_flutter_project/view/pages/user.dart';
+import 'package:first_flutter_project/view/pages/user_page.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatefulWidget {
@@ -67,7 +67,8 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
               autovalidateMode: AutovalidateMode.onUserInteraction,
               decoration: InputDecoration(
                 fillColor: Colors.grey.withOpacity(.3),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
                 filled: true,
                 hintStyle: const TextStyle(color: Colors.grey),
                 hintText: 'Enter your name',
@@ -90,7 +91,8 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
               autovalidateMode: AutovalidateMode.onUserInteraction,
               decoration: InputDecoration(
                 fillColor: Colors.grey.withOpacity(.3),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
                 filled: true,
                 hintStyle: const TextStyle(color: Colors.grey),
                 hintText: 'Enter your email',
@@ -115,7 +117,8 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
               obscureText: isVisible,
               decoration: InputDecoration(
                 fillColor: Colors.grey.withOpacity(.3),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
                 filled: true,
                 hintStyle: const TextStyle(color: Colors.grey),
                 hintText: '*********',
@@ -126,7 +129,9 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
                       isVisible = !isVisible;
                     });
                   },
-                  child: Icon(!isVisible ? Icons.visibility : Icons.visibility_off, color: Colors.grey),
+                  child: Icon(
+                      !isVisible ? Icons.visibility : Icons.visibility_off,
+                      color: Colors.grey),
                 ),
               ),
             ),
@@ -185,7 +190,8 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
               width: MediaQuery.sizeOf(context).width,
               child: ElevatedButton.icon(
                 style: ButtonStyle(
-                  backgroundColor: const MaterialStatePropertyAll(Colors.transparent),
+                  backgroundColor:
+                      const MaterialStatePropertyAll(Colors.transparent),
                   shape: MaterialStatePropertyAll(
                     RoundedRectangleBorder(
                       side: const BorderSide(color: Colors.grey),
@@ -210,7 +216,8 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
               width: MediaQuery.sizeOf(context).width,
               child: ElevatedButton.icon(
                 style: ButtonStyle(
-                  backgroundColor: const MaterialStatePropertyAll(Colors.transparent),
+                  backgroundColor:
+                      const MaterialStatePropertyAll(Colors.transparent),
                   shape: MaterialStatePropertyAll(
                     RoundedRectangleBorder(
                       side: const BorderSide(color: Colors.grey),
