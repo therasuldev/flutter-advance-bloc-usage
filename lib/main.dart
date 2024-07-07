@@ -1,18 +1,38 @@
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:first_flutter_project/core/provider/app_bloc/app_bloc.dart';
 import 'package:first_flutter_project/core/provider/app_bloc/app_event.dart';
 import 'package:first_flutter_project/core/provider/profile_bloc/profile_bloc.dart';
+import 'package:first_flutter_project/core/repository/cache_repository.dart';
 import 'package:first_flutter_project/test.dart';
 import 'package:first_flutter_project/view/pages/app_scaffold.dart';
 import 'package:first_flutter_project/view/pages/profile.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ConstantValues {
   static GlobalKey<ScaffoldMessengerState> snackBarKey = GlobalKey<ScaffoldMessengerState>();
 }
 
-void main() {
-  print(PrivateClass.instance!.a);
+class A {
+  final String name;
+  A({required this.name});
+
+  factory A.fromJson(Map<String, dynamic> json) {
+    return A(name: json['name']);
+  }
+  Map<String, dynamic> toJson() {
+    return {"name": name};
+  }
+}
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final a = A(name: 'DART');
+  final value = json.encode(a.toJson());
+  await CacheRepositoryImpl().put('key', value);
 
   runApp(const MyApp());
 }
